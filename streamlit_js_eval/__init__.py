@@ -37,7 +37,7 @@ def copy_to_clipboard(copiedText, linkText, successText, component_key=None):
     if component_key is None: component_key=f'{linkText}{copiedText}{successText}'
     return streamlit_js_eval(js_expressions=js_text, key = component_key)
 
-def get_height(component_key='UAH'):
+def get_height(component_key=None):
     js_text = "window.innerHeight"
     if component_key is None: component_key=js_text
     return streamlit_js_eval(js_expressions=js_text, key = component_key)
